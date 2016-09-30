@@ -40,8 +40,9 @@ def main():
       data.append(g610_backlitmode_logo_static.replace("#brightness#", g610_brightness[level]))
 
     elif sys.argv[1] == "--test":
-      data = sys.argv[2]
-      print "test mode: " + data
+      data.append(sys.argv[2])
+      print "test mode: "
+      print data
 
     attachKeyboard()
     updateKeyboard()
