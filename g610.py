@@ -24,11 +24,11 @@ g610_backlitmode_static       = "11ff0d3b0001#brightness#0200000000000000000000"
 g610_backlitmode_logo_static  = "11ff0d3b0101#brightness#0200000000000000000000"
 
 def help():
-  print '  Usage :'
-  print '    g610.py backlit {level 0-4}'
-  print '    g610.py --test {data_frame}'
-  print '    g610.py --help'
-  print ''
+  print('  Usage :')
+  print('    g610.py backlit {level 0-4}')
+  print('    g610.py --test {data_frame}')
+  print('    g610.py --help')
+  print('')
 
 def main():
   global data
@@ -41,8 +41,8 @@ def main():
 
     elif sys.argv[1] == "--test":
       data.append(sys.argv[2])
-      print "test mode: "
-      print data
+      print('test mode: ')
+      print(data)
 
     attachKeyboard()
     updateKeyboard()
@@ -57,7 +57,7 @@ def attachKeyboard():
   global intf
   dev = usb.core.find(idVendor=0x046d, idProduct=0xc333)
   if dev is None:
-    print 'Device not found, exiting...'
+    print('Device not found, exiting...')
     sys.exit()
   intf = 1
   if dev.is_kernel_driver_active(intf) is True:
@@ -85,7 +85,7 @@ def updateKeyboard():
       sleep(.01)
 
   except:
-    print 'Error updating keyboard'
+    print('Error updating keyboard')
 
 
 if len(sys.argv) > 1:
