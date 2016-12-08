@@ -9,15 +9,23 @@ This script need the PyUSB library.
 `pip install -r requirements.txt`
 
 ## Usage
-To change the backlit intensity, use the backlit argument:
+To change the backlit intensity, use a pre defined level or a direct value:
 ```
-python g610.py backlit {0,1,2,3,4}
+python3 g610.py {off,l1-6,max}
 ```
-where 0 is backlit off and 4 is brightest.
+You can also set the backlit intensity for specific groups:
+```
+python3 g610.py -g <group> {off,l1-6,max}
+```
+The following groups are available:
+```
+logo, multimedia, fkeys, modifiers, arrows, numeric, gaming
+```
 
 ## Example
 To turn the backlit off:
 ```
-sudo python g610.py backlit 0
+sudo python3 g610.py off
 ```
+
 
