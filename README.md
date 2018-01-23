@@ -11,11 +11,11 @@ This script need the PyUSB library.
 ## Usage
 To change the backlit intensity, use a pre defined level or a direct value:
 ```
-python3 g610.py {off,l1-6,max}
+python3 g610.py {off,1-6,max}
 ```
 You can also set the backlit intensity for specific groups:
 ```
-python3 g610.py -g <group> {off,l1-6,max}
+python3 g610.py -g <group> {off,1-6,max}
 ```
 The following groups are available:
 ```
